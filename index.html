@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Profil Pelita Blessty Situmorang, siswi TKJ di SMK Bangun Nusa Bangsa.">
+  <title>Pelita Blessty Situmorang — Profil</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1020;
+      --surface: rgba(20, 28, 51, 0.78);
+      --text: #f5f7ff;
+      --muted: #a6b0ca;
+      --accent: #9c8cff;
+      --cyan: #66e4da;
+      --line: rgba(190, 201, 239, 0.14);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      min-width: 320px;
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at 12% 9%, rgba(108, 87, 220, 0.22), transparent 34rem),
+        radial-gradient(ellipse at 90% 58%, rgba(48, 177, 174, 0.12), transparent 30rem),
+        var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      width: min(1120px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 0;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 0.93rem;
+      font-weight: 750;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 36px;
+      height: 36px;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 12px;
+      color: #0b1020;
+      background: linear-gradient(135deg, var(--cyan), var(--accent));
+      font-weight: 900;
+    }
+
+    nav { display: flex; gap: 30px; color: var(--muted); font-size: 0.9rem; }
+    nav a:hover, nav a:focus-visible { color: var(--text); }
+
+    .hero {
+      display: grid;
+      min-height: 610px;
+      grid-template-columns: 1.12fr 0.88fr;
+      align-items: center;
+      gap: 54px;
+      padding: 56px 0 94px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 22px;
+      color: var(--cyan);
+      font-size: 0.78rem;
+      font-weight: 750;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 25px;
+      height: 1px;
+      background: currentColor;
+      content: "";
+    }
+
+    h1 {
+      max-width: 720px;
+      margin: 0;
+      font-size: clamp(3rem, 7vw, 5.7rem);
+      font-weight: 800;
+      letter-spacing: -0.075em;
+      line-height: 0.99;
+    }
+
+    h1 span {
+      display: block;
+      color: transparent;
+      background: linear-gradient(100deg, #c0b6ff 4%, #75e9df 95%);
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+
+    .intro {
+      max-width: 520px;
+      margin: 26px 0 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 32px; }
+
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 19px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+    }
+
+    .button:hover { transform: translateY(-2px); border-color: rgba(255,255,255,.34); }
+    .button-primary { border-color: transparent; color: #0b1020; background: linear-gradient(110deg, var(--cyan), #b8aaff); }
+    .button-secondary { background: rgba(255,255,255,.035); }
+
+    .visual {
+      position: relative;
+      display: grid;
+      min-height: 410px;
+      place-items: center;
+      isolation: isolate;
+    }
+
+    .orbit {
+      position: absolute;
+      z-index: -1;
+      width: min(390px, 90%);
+      aspect-ratio: 1;
+      border: 1px solid rgba(189, 199, 255, .13);
+      border-radius: 50%;
+      box-shadow: 0 0 90px rgba(131, 117, 255, .11), inset 0 0 70px rgba(131, 117, 255, .06);
+    }
+
+    .orbit::before, .orbit::after {
+      position: absolute;
+      border: 1px solid rgba(189, 199, 255, .10);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .orbit::before { inset: 9%; }
+    .orbit::after { inset: 20%; }
+
+    .monogram {
+      display: grid;
+      width: min(265px, 65vw);
+      aspect-ratio: 1;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 35% 65% 58% 42% / 44% 40% 60% 56%;
+      background:
+        linear-gradient(145deg, rgba(151, 132, 255, .85), rgba(71, 201, 197, .66)),
+        #232a48;
+      box-shadow: 0 25px 100px rgba(107, 100, 235, .3), inset 0 1px 1px rgba(255,255,255,.35);
+      color: white;
+      font-size: clamp(4rem, 10vw, 7.5rem);
+      font-weight: 850;
+      letter-spacing: -0.1em;
+      line-height: 1;
+      padding-right: 0.1em;
+      transform: rotate(-7deg);
+    }
+
+    .float-tag {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 11px 15px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(14, 21, 40, .78);
+      box-shadow: 0 14px 35px rgba(0,0,0,.18);
+      color: #e8ebfa;
+      font-size: 0.82rem;
+      font-weight: 650;
+      backdrop-filter: blur(14px);
+    }
+
+    .float-tag strong { color: var(--cyan); font-size: 1rem; }
+    .tag-top { top: 16%; right: 0; }
+    .tag-bottom { bottom: 14%; left: 0; }
+
+    .section { padding: 74px 0; border-top: 1px solid var(--line); }
+    .section-heading { max-width: 610px; margin-bottom: 32px; }
+    .section-heading .eyebrow { margin-bottom: 13px; }
+    h2 { margin: 0; font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.055em; line-height: 1.12; }
+    .section-heading p { margin: 14px 0 0; color: var(--muted); }
+
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+
+    .info-card {
+      min-height: 172px;
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.018));
+    }
+
+    .card-label { margin: 0 0 17px; color: var(--muted); font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+    .card-value { margin: 0; font-size: 1.2rem; font-weight: 750; }
+    .card-detail { margin: 5px 0 0; color: var(--muted); font-size: .92rem; }
+
+    .study-card {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 22px;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: linear-gradient(120deg, rgba(156,140,255,.13), rgba(102,228,218,.055));
+    }
+
+    .study-icon {
+      display: grid;
+      width: 58px;
+      height: 58px;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 18px;
+      background: rgba(255,255,255,.07);
+      color: var(--cyan);
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+
+    .study-card h3 { margin: 0; font-size: 1.15rem; }
+    .study-card p { margin: 5px 0 0; color: var(--muted); }
+    .study-badge { padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--cyan); font-size: .78rem; font-weight: 750; }
+
+    .closing {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 30px 0 38px;
+      color: var(--muted);
+      font-size: .86rem;
+    }
+
+    .closing strong { color: var(--text); }
+
+    @media (max-width: 760px) {
+      .page { width: min(100% - 36px, 560px); }
+      .topbar { padding: 20px 0; }
+      nav { gap: 17px; font-size: .82rem; }
+      .hero { min-height: auto; grid-template-columns: 1fr; gap: 5px; padding: 64px 0 70px; }
+      .hero-copy { position: relative; z-index: 1; }
+      .visual { min-height: 350px; }
+      .orbit { width: min(330px, 84%); }
+      .section { padding: 56px 0; }
+      .study-card { grid-template-columns: auto 1fr; padding: 22px; }
+      .study-badge { grid-column: 2; justify-self: start; }
+    }
+
+    @media (max-width: 480px) {
+      nav { gap: 13px; }
+      nav a { font-size: .78rem; }
+      .brand { gap: 8px; font-size: .8rem; }
+      .brand-mark { width: 32px; height: 32px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .info-card { min-height: auto; }
+      .float-tag { padding: 9px 12px; font-size: .75rem; }
+      .tag-top { right: -3px; }
+      .tag-bottom { left: -3px; }
+      .closing { align-items: flex-start; flex-direction: column; gap: 6px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <a class="brand" href="#beranda" aria-label="Pelita Blessty Situmorang, beranda">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <span>Pelita Blessty Situmorang</span>
+      </a>
+      <nav aria-label="Navigasi utama">
+        <a href="#tentang">Tentang</a>
+        <a href="#pendidikan">Pendidikan</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="beranda" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Kenalan, yuk!</p>
+          <h1 id="hero-title">Halo, saya <span>Pelita.</span></h1>
+          <p class="intro">Siswi jurusan Teknik Komputer dan Jaringan yang antusias belajar, berkembang, dan menjelajahi dunia teknologi.</p>
+          <div class="actions">
+            <a class="button button-primary" href="#tentang">Lihat profil <span aria-hidden="true">&nbsp;↘</span></a>
+            <a class="button button-secondary" href="#pendidikan">Pendidikan saya</a>
+          </div>
+        </div>
+        <div class="visual" aria-label="Monogram Pelita dengan inisial PBS">
+          <div class="orbit" aria-hidden="true"></div>
+          <div class="monogram" aria-hidden="true">PB</div>
+          <div class="float-tag tag-top"><strong>17</strong><span>tahun</span></div>
+          <div class="float-tag tag-bottom"><strong>TKJ</strong><span>tech learner</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="tentang" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="eyebrow">Tentang saya</p>
+          <h2 id="about-title">Sedikit cerita tentang Pelita.</h2>
+          <p>Saat ini saya sedang menempuh pendidikan di bidang teknologi jaringan dan komputer.</p>
+        </div>
+        <div class="about-grid">
+          <article class="info-card">
+            <p class="card-label">Nama lengkap</p>
+            <p class="card-value">Pelita Blessty Situmorang</p>
+            <p class="card-detail">Senang berkenalan dengan Anda!</p>
+          </article>
+          <article class="info-card">
+            <p class="card-label">Tanggal lahir</p>
+            <p class="card-value">15 Januari 2009</p>
+            <p class="card-detail">Saat ini berusia 17 tahun</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="pendidikan" aria-labelledby="education-title">
+        <div class="section-heading">
+          <p class="eyebrow">Pendidikan</p>
+          <h2 id="education-title">Belajar untuk masa depan.</h2>
+        </div>
+        <article class="study-card">
+          <div class="study-icon" aria-hidden="true">&lt;/&gt;</div>
+          <div>
+            <h3>SMK Bangun Nusa Bangsa</h3>
+            <p>Teknik Komputer dan Jaringan (TKJ)</p>
+          </div>
+          <span class="study-badge">Siswa</span>
+        </article>
+      </section>
+    </main>
+
+    <footer class="closing">
+      <span>Dibuat dengan semangat oleh <strong>Pelita</strong></span>
+      <span>© <span id="year">2026</span> · Profil pribadi</span>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
